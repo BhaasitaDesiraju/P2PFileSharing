@@ -11,6 +11,10 @@ public class WriteLog {
   private PrintWriter logFile;
   private int peerID;
 
+  public WriteLog() {
+
+  }
+
   public WriteLog(int peerID) {
     try {
       this.peerID = peerID;
