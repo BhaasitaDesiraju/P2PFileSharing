@@ -1,33 +1,21 @@
 all:
-javac com/CommonProperties.java
-javac com/PeerInfo.java
-javac com/PeerInfoProperties.java
-javac connection/ConnectionHandler.java
-javac files/FileManager.java
-javac files/FileUtilities.java
-javac log/WriteLog.java
-javac messages/Handshake.java
-javac messages/Message.java
-javac messages/MessageType.java
-javac payloads/BitField.java
-javac payloads/Choke.java
-javac payloads/Have.java
-javac payloads/Interested.java
-javac payloads/NotInterested.java
-javac payloads/Payload.java
-javac payloads/Piece.java
-javac payloads/Request.java
-javac payloads/Unchoke.java
-javac peers/Peer.java
-javac peers/PeerManager.java
-javac peers/PeerProcess.java
-javac peers/Process.java
-javac peers/RemotePeerInfo.java
-javac start/StartRemotePeers.java
-javac util/Constants.java
-javac Client.java
-javac Server.java
+	javac -g com/CommonProperties.java
+	javac -g com/Server.java
+	javac -g logger/Logger.java
+	javac -g message/Handshake.java
+	javac -g message/Message.java
+	javac -g message/MessageAttributes.java
+	javac -g message/MessageConstants.java
+	javac -g message/MessageProcessor.java
+	javac -g payloads/BitFieldPayload.java
+	javac -g payloads/PiecePayload.java
+	javac -g peer/PeerDataRateComparator.java
+	javac -g peer/PeerProcess.java
+	javac -g peer/RemotePeerHandler.java
+	javac -g peer/RemotePeerInfo.java
+	javac -g util/ConversionUtil.java
+	javac -g util/DateUtil.java
+	javac -g StartRemotePeers.java
 
 clean:
-$(RM) *.class
-
+	find . -type f -name '*.class' -delete
